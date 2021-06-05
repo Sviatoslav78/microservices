@@ -1,0 +1,70 @@
+apiVersion: 1
+
+deleteDatasources:
+  - name: InfluxDB
+    orgId: 1
+  - name: Prometheus
+    orgId: 1
+  - name: MySQL
+    orgId: 1
+
+datasources:
+- name: InfluxDB
+  type: influxdb
+  access: direct
+  orgId: 1
+  url: http://localhost:8086
+  password:
+  user:
+  database: bookstore_influxdb_monitoring_metrics
+  version: 1
+  editable: true
+  jsonData:
+    httpMode: GET
+
+- name: InfluxDB Internal
+  type: influxdb
+  access: direct
+  orgId: 1
+  url: http://localhost:8086
+  password:
+  user:
+  database: _internal
+  version: 1
+  editable: true
+  jsonData:
+    httpMode: GET
+
+- name: InfluxDB Telegraf
+  type: influxdb
+  access: direct
+  orgId: 1
+  url: http://localhost:8086
+  password:
+  user:
+  database: telegraf
+  version: 1
+  editable: true
+  jsonData:
+    httpMode: GET
+
+- name: Prometheus
+  type: prometheus
+  access: direct
+  orgId: 1
+  url: http://localhost:9090
+  jsonData:
+    httpMethod: GET
+  version: 1
+  editable: true
+
+- name: MySQL
+  type: mysql
+  access: proxy
+  orgId: 1
+  url: jdbc:mysql://freedb.tech:3306/freedbtech_camerashopdb
+  user: freedbtech_bershka
+  secureJsonData:
+    password: 10122000
+  version: 1
+  editable: true

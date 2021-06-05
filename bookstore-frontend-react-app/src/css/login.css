@@ -1,0 +1,26 @@
+
+.login_form{
+
+padding: 50px;
+  background: linear-gradient(123.58deg, rgba(255, 129, 75, 0.828) 4.18%, rgba(255, 205, 108, 0.9) 94.18%)!important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+}
+
+.header_login{
+
+  font-weight: bold;
+  font-size: 5em;
+  line-height: 88px;
+  text-align: center;
+  color: #000000;
+}
+.py-3.row{
+  font-size: 1.5em!important;
+  text-align: center;
+}
+
+.py-3{
+  height: 60% !important;
+}
+
